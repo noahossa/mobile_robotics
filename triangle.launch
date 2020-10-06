@@ -1,0 +1,11 @@
+<launch>
+<node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node"/>
+
+<node pkg="traj_tracker" type="tracker.py" name="tracker" output = "screen"> 
+<rosparam param = "trajectory_description" command="load" file="$(find traj_tracker)/config/triangle_5.yaml"/> 
+<rosparam param = "x"> 1 </rosparam>
+<rosparam param = "y"> 1 </rosparam>
+<rosparam param = "w"> 0 </rosparam>
+</node>
+
+</launch>
